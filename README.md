@@ -35,7 +35,7 @@ Final markdown report
     ```sh
     idf.py menuconfig
     ```
-8.1 到 Serial flasher config -> 進去 Flash size(點鍵盤右鍵) -> 改成 4MB：
+    8.1 到 Serial flasher config -> 進去 Flash size(點鍵盤右鍵) -> 改成 4MB：
     <img width="600" alt="image" src="https://github.com/leo0525/esp32-class4-picture/blob/main/setting_flasher_config.png">
     
  
