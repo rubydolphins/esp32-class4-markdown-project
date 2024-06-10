@@ -35,7 +35,9 @@ Final markdown report
     ```sh
     idf.py menuconfig
     ```
-   到 Serial flasher config -> 進去 Flash size(點鍵盤右鍵) -> 改成 4MB：
+    
+8.1. 到 Serial flasher config -> 進去 Flash size(點鍵盤右鍵) -> 改成 4MB：
+
    
 10. 清除編譯資料
     ```sh
