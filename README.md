@@ -1,7 +1,7 @@
 # esp32-class4-markdown-project
 Final markdown report
 
-## 基本設置
+# 基本設置和Terminal 範例執行成功(Hello word & motion)
 
 1. 開啟電腦終端機(cmd)
     ```sh
@@ -60,6 +60,7 @@ Final markdown report
     idf.py monitor
     ```
 15. 成功出現 hello word :
+    
     <img width="600" alt="image" src="https://github.com/leo0525/esp32-class4-picture/blob/main/hellow_result.png">
     
 # Motion Detection 使用指南
@@ -105,7 +106,90 @@ Final markdown report
 
 8. 測試 motion detection：
     在鏡頭前揮動手，視窗會顯示 `motion_detection`。
-    <img width="600" alt="image" src="https://github.com/leo0525/esp32-class4-picture/blob/main/motion_1.png">
+    <img width="600" alt="image" src="https://github.com/leo0525/esp32-class4-picture/blob/main/motion_1.png">    
+    
+# 復原範例執行
+
+此指南將幫助你在 ESP32-S3 上進行 復原範例 的設置和運行。
+
+## 步驟
+
+1. 切換到目標目錄：
+    ```sh
+    cd C:\Users\leo\esp-idf\examples\get-started\esp-who\examples\esp32-s3-eye
+    ```
+
+2. 設置目標為 ESP32-S3：
+    ```sh
+    idf.py set-target esp32s3
+    ```
+
+3. 清除編譯資料：
+    ```sh
+    idf.py fullclean
+    ```
+
+4. 編譯：
+    ```sh
+    idf.py build
+    ```
+
+5. 清除 esp32 flash：
+    ```sh
+    esptool.py --chip esp32s3 -p COM6 erase_flash
+    ```
+
+6. 燒錄：
+    ```sh
+    idf.py -p COM6 -b 460800 flash
+    ```
+7. 板子已恢復成原廠狀態，由左上角按鈕切換模式："鏡頭模式"、"人臉偵測模式"..等，如下圖　：
+   <img width="600" alt="image" src="https://github.com/leo0525/esp32-class4-picture/blob/main/re_fig.png">
+    
+
+# Cat Face Detection & Web 使用指南
+
+此指南將幫助你在 ESP32-S3 上進行貓臉偵測的設置和運行與將結果顯示在Web上。
+
+## 步驟
+
+1. 切換到目標目錄：
+    ```sh
+    cd C:\Users\User\esp-idf\examples\get-started\esp-who\examples\cat_face_detection\web
+    ```
+
+2. 設置目標為 ESP32-S3：
+    ```sh
+    idf.py set-target esp32s3
+    ```
+
+3. 編譯工程：
+    ```sh
+    idf.py build
+    ```
+
+4. 燒錄固件：
+    ```sh
+    idf.py flash
+    ```
+
+5. 打開監視器：
+    ```sh
+    idf.py monitor
+    ```
+
+6. 執行監視器後，會出現以下畫面，將IP複製起來，即可退出監視器 :
+   <img width="600" alt="image" src="https://github.com/leo0525/esp32-class4-picture/blob/main/web-1.png">
+    
+7. 將電腦的 Wi-Fi 連線到名稱為 Cat Face Detection 的網路 :
+   <img width="600" alt="image" src="https://github.com/leo0525/esp32-class4-picture/blob/main/web-2.png"> 
+
+8. 在 Google 網址輸入「步驟6」出現的 IP，例如 `192.168.4.1`。
+
+9. 將畫面的 Resolution 設為 VGA，然後點選 `Start Stream`。將 ESP32 板子對準貓臉，就會出現以下畫面，顯示貓臉以及貓臉偵測框　：
+   <img width="600" alt="image" src="https://github.com/leo0525/esp32-class4-picture/blob/main/web-3.png"> 
+
+
 
 ## 注意事項
 
