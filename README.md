@@ -60,7 +60,7 @@ Final markdown report
     idf.py monitor
     ```
 15. 成功出現 hello word
-
+    <img width="600" alt="image" src="https://github.com/leo0525/esp32-class4-picture/blob/main/hellow_result.png">
 # Motion Detection 使用指南
 
 此指南將幫助你在 ESP32-S3 上進行 motion detection 的設置和運行。
