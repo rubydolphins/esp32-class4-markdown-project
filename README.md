@@ -59,7 +59,7 @@ Final markdown report
     ```sh
     idf.py monitor
     ```
-15. 成功出現 hello word：
+15. 成功出現 hello word :
     <img width="600" alt="image" src="https://github.com/leo0525/esp32-class4-picture/blob/main/hellow_result.png">
     
 # Motion Detection 使用指南
