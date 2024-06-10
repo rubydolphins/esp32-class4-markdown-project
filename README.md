@@ -5,16 +5,23 @@ Final markdown report
 
 16. 開啟電腦終端機(cmd)
     ```sh
-    pip install esptool
-    git clone --recursive https://github.com/espressif/esp-idf.git
-    cd esp-idf
-    install
-    export
-    cd examples\get-started\hello_world
-    idf.py set-target esp32s3
-    idf.py menuconfig
+1.  pip install esptool
     ```
-17. 到Serial flasher config -> 進去Flash size(點鍵盤右鍵) -> 改成4MB
+2.  git clone --recursive https://github.com/espressif/esp-idf.git
+    ```
+3.  cd esp-idf
+    ```
+4.  install
+    ```
+5.  export
+    ```
+6.  cd examples\get-started\hello_world
+    ```
+7.  idf.py set-target esp32s3
+    ```
+8.  idf.py menuconfig
+    ```
+18. 到Serial flasher config -> 進去Flash size(點鍵盤右鍵) -> 改成4MB
     ```sh
     idf.py fullclean
     idf.py build
