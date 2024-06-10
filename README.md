@@ -43,7 +43,7 @@ Final markdown report
 
 8. 測試 motion detection：
     在鏡頭前揮動手，視窗會顯示 `motion_detection`。
-<img width="188" alt="image" src=https://github.com/leo0525/esp32-class4-picture/blob/main/motion_1.png>
+<img width="250" alt="image" src=https://github.com/leo0525/esp32-class4-picture/blob/main/motion_1.png>
 ## 注意事項
 
 - 請確保你已安裝並配置好 ESP-IDF 開發環境。
