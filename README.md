@@ -3,33 +3,59 @@ Final markdown report
 
 ## 基本設置
 
-16. 開啟電腦終端機(cmd)
+1. 開啟電腦終端機(cmd)
     ```sh
-1.  pip install esptool
+    pip install esptool
     ```
-2.  git clone --recursive https://github.com/espressif/esp-idf.git
+2. 克隆 ESP-IDF 倉庫：
+    ```sh
+    git clone --recursive https://github.com/espressif/esp-idf.git
     ```
-3.  cd esp-idf
+3. 切換到 esp-idf 目錄：
+    ```sh
+    cd esp-idf
     ```
-4.  install
+4. 安裝 ESP-IDF：
+    ```sh
+    install
     ```
-5.  export
+5. 配置環境變量：
+    ```sh
+    export
     ```
-6.  cd examples\get-started\hello_world
+6. 切換到範例目錄：
+    ```sh
+    cd examples\get-started\hello_world
     ```
-7.  idf.py set-target esp32s3
+7. 設置目標為 ESP32-S3：
+    ```sh
+    idf.py set-target esp32s3
     ```
-8.  idf.py menuconfig
+8. 打開配置菜單：
+    ```sh
+    idf.py menuconfig
     ```
-18. 到Serial flasher config -> 進去Flash size(點鍵盤右鍵) -> 改成4MB
+9. 到 Serial flasher config -> 進去 Flash size(點鍵盤右鍵) -> 改成 4MB：
     ```sh
     idf.py fullclean
+    ```
+10. 清除編譯資料：
+    ```sh
     idf.py build
+    ```
+11. 清除 ESP32S3 板子上的資料：
+    ```sh
     esptool.py --chip esp32s3 -p COM6 erase_flash
+    ```
+12. 編譯並燒入資料到板子上：
+    ```sh
     idf.py -p COM6 -b 460800 flash
+    ```
+13. 顯示在終端上：
+    ```sh
     idf.py monitor
     ```
-    成功出現hello word
+14. 成功出現 hello word
 
 # Motion Detection 使用指南
 
@@ -57,7 +83,7 @@ Final markdown report
     idf.py build
     ```
 
-5. 清除esp32 flash：
+5. 清除 esp32 flash：
     ```sh
     esptool.py --chip esp32s3 -p COM6 erase_flash
     ```
@@ -74,7 +100,7 @@ Final markdown report
 
 8. 測試 motion detection：
     在鏡頭前揮動手，視窗會顯示 `motion_detection`。
-    <img width="600" alt="image" src=https://github.com/leo0525/esp32-class4-picture/blob/main/motion_1.png>
+    <img width="600" alt="image" src="https://github.com/leo0525/esp32-class4-picture/blob/main/motion_1.png">
 
 ## 注意事項
 
