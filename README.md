@@ -35,27 +35,29 @@ Final markdown report
     ```sh
     idf.py menuconfig
     ```
-9. 到 Serial flasher config -> 進去 Flash size(點鍵盤右鍵) -> 改成 4MB：
+   到 Serial flasher config -> 進去 Flash size(點鍵盤右鍵) -> 改成 4MB：
+   
+10. 清除編譯資料
     ```sh
     idf.py fullclean
     ```
-10. 清除編譯資料：
+11. 建構編譯資料：
     ```sh
     idf.py build
     ```
-11. 清除 ESP32S3 板子上的資料：
+12. 清除 ESP32S3 板子上的資料：
     ```sh
     esptool.py --chip esp32s3 -p COM6 erase_flash
     ```
-12. 編譯並燒入資料到板子上：
+13. 編譯並燒入資料到板子上：
     ```sh
     idf.py -p COM6 -b 460800 flash
     ```
-13. 顯示在終端上：
+14. 顯示在終端上：
     ```sh
     idf.py monitor
     ```
-14. 成功出現 hello word
+15. 成功出現 hello word
 
 # Motion Detection 使用指南
 
